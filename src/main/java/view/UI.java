@@ -9,7 +9,7 @@ public class UI {
 		System.out.println("CONTINUAR CON TU USUARIO");
 	}
 	
-	public void menuPrincipal() {
+	public static void menuPrincipal() {
 		System.out.println("_________________________NBA CODERE_________________________ ");
 		System.out.println("                                                            |");
 		System.out.println("(aqui voy a poner el dinero)                                |");
@@ -18,7 +18,7 @@ public class UI {
 		System.out.println("                     [2] -> Estadisticas                    |");
 		System.out.println("                     [3] -> Mercado                         |");
 		System.out.println("                     [4] -> Estadisticas                    |");
-		System.out.println("                     [5] -> Salir                           |");
+		System.out.println("                     [0] -> Salir                           |");
 		System.out.println("                                                            |");
 		System.out.println("____________________________________________________________|");
 		

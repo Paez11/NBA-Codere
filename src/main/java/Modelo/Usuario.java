@@ -5,7 +5,7 @@ import interfaces.IUsuario;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Usuario implements IUsuario {
+public class Usuario /*implements IUsuario*/ {
 	
 	private String nombre;
 	private Dinero dinero;
@@ -31,7 +31,7 @@ public class Usuario implements IUsuario {
 		this.equipos = new HashSet<Equipo>();
 	}
 	
-	private Usuario(String nombre, Dinero dinero, HashSet<Equipo> equipos) {
+	public Usuario(String nombre, Dinero dinero, HashSet<Equipo> equipos) {
 		this.nombre = nombre;
 		this.dinero = dinero;
 		this.equipos = equipos;
@@ -64,27 +64,36 @@ public class Usuario implements IUsuario {
 		}
 		return _newInstance;
 	}
-	
-	@Override
-	public void anadirEquipo(Equipo e) {
-		equipos.add(e);
+
+	public String getNombre() {
+		return nombre;
 	}
 
-	@Override
-	public void setDinero(Dinero d) {
-		dinero = d;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
-	@Override
 	public Dinero getDinero() {
 		return dinero;
 	}
 
-	@Override
-	public void sistemadeApuestas() {
-		
+	public void setDinero(Dinero dinero) {
+		this.dinero = dinero;
 	}
-	
-	
-	
+
+	public Set<Equipo> getEquipos() {
+		return equipos;
+	}
+
+	public void setEquipos(Set<Equipo> equipos) {
+		this.equipos = equipos;
+	}
+
+	public static Usuario get_newInstance() {
+		return _newInstance;
+	}
+
+	public static void set_newInstance(Usuario _newInstance) {
+		Usuario._newInstance = _newInstance;
+	}
 }

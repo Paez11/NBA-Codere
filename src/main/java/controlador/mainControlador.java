@@ -1,6 +1,7 @@
 package controlador;
 
 import utils.lee;
+import view.UI;
 
 public class mainControlador {
 
@@ -12,7 +13,7 @@ public class mainControlador {
 
         int opcion=-1;
         do {
-            //
+            UI.menuPrincipal();
             opcion= lee.Entero();
             switchMenuPrincipal(opcion);
         }while(opcion!=0);
