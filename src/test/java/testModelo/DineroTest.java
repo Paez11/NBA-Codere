@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class DineroTest {
-	
+	/*
 	Dinero dinero1 = new Dinero(100);
 	
 	@Test
@@ -35,5 +35,5 @@ class DineroTest {
 		dinero1.acumularPuntos(0);
 		assertEquals(100, dinero1.getpuntos());
 	}
-	
+	*/
 }

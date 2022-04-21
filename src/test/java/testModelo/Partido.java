@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 
 class TestPartido {
+	/*
 	Equipo e1 = new Equipo (Jugadores[]);
 	Equipo e2 = new Equipo (Jugadores[]);
 	new Equipos e = new Equipos[2];
@@ -29,7 +30,7 @@ class TestPartido {
 		assertArrayEquals(ArrayList<Equipo>(e1), ArrayList<Equipo>(e1,e2));
 		
 	}
-	
+	*/
 	
 	
 }

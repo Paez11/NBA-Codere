@@ -5,8 +5,8 @@ import org.hamcrest.core.IsNot;
 import org.junit.Test;
 
 class prueba_sistema {
-	;
-	
+
+	/*
 	@Test
 	void Noneg_ganados(int partidos_ganados) {
 		assertTrue("El numero es negativo", partidos_ganados>0);
@@ -35,6 +35,6 @@ class prueba_sistema {
 
 	
 	}
-
-
+	*/
+}
 
