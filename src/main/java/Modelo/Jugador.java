@@ -1,5 +1,7 @@
 package Modelo;
 
+import java.util.Random;
+
 public class Jugador {
 	private String nombre;
 	private int defensa;
@@ -8,6 +10,8 @@ public class Jugador {
 	private int pase;
 	private int faltas;
 	private int altura;
+
+	protected Random rand = new Random(System.nanoTime());
 	
 	public Jugador(String nombre, int defensa, int tiro, int ritmo, int pase, int faltas, int altura) {
 		super();
@@ -78,6 +82,47 @@ public class Jugador {
 
 	public void setAltura(int altura) {
 		this.altura = altura;
+	}
+
+
+	public boolean tiraCanasta(int tiro){
+		boolean result=false;
+		tiro=rand.nextInt(this.tiro);
+		if (tiro >= 40){
+			result=true;
+		}
+		return result;
+	}
+
+	public boolean defender(int defensa, int tiro){
+		boolean result=false;
+		tiro=rand.nextInt(this.tiro);
+		defensa=rand.nextInt(this.defensa);
+		if (tiraCanasta(tiro)){
+			if (defensa>=50){
+				result=true;
+			}
+		}
+		return result;
+	}
+
+	public boolean pasarBalon(int pase){
+		boolean result=false;
+		pase=rand.nextInt(this.pase);
+		if (pase >= 20){
+			result=true;
+		}
+		return result;
+	}
+
+	public boolean faltaJugador(){
+		boolean result=false;
+
+		int falta=rand.nextInt(100);
+		if (falta > 70){
+			result=true;
+		}
+		return result;
 	}
 
 	@Override
